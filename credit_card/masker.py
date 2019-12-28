@@ -10,7 +10,7 @@ def mask_number(number):
 		return unmasked
 
 	# Extract the section that needs to be masked i.e. middle segment
-	unmasked_sensitive_info = unmasked[4:len(unmasked)-4]
+	unmasked_sensitive_info = unmasked[4:-4]
 
 	# Use regular expressions to find only digits
 	# and substitute each match with #
@@ -21,6 +21,6 @@ def mask_number(number):
 
 	# Combine the segments i.e. first four, middle segment and last_four
 	first_four = unmasked[:4]
-	last_four = unmasked[len(unmasked)-4:]
+	last_four = unmasked[-4:]
 
 	return first_four + masked_sensitive_info + last_four
