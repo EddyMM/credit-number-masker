@@ -3,7 +3,7 @@ import unittest
 from credit_card.masker import mask_number
 
 
-class TestCarMasking(unittest.TestCase):
+class TestCardMasking(unittest.TestCase):
 
 	def test_various_inputs(self):
 		test_cases = [ 
